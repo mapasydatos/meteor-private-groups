@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use([
     'meteor-platform', //we use all core standards
     'alanning:roles@1.2.13', 
-    'kestanous:candid@0.3.0-dev'
+    'kestanous:candid@0.3.0-pre2'
   ])
 
   api.addFiles('private:groups.js');
