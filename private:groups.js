@@ -1,6 +1,22 @@
 Groups = new Mongo.Collection('groups');
 Groups.adminRole = '';
 
+Meteor.users.helpers({
+  addRole: function (role, group) {
+
+  },
+  removeRole: function (role, group) {
+
+  }
+});
+
+Groups.helpers({
+  create: function () {
+    console.log(this.$data())
+    // Meteor.call('addGroup', this.$data())
+  }
+});
+
 
 Meteor.methods({
  'addGroup': function (groupObj) {

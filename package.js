@@ -14,9 +14,11 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.2');
 
   api.use([
+    'mreaction:shadow-helpers@0.1.0',
     'meteor-platform', //we use all core standards
     'alanning:roles@1.2.13', 
-    'kestanous:candid@0.3.0-pre2'
+    'kestanous:candid@0.3.0-pre2',
+    'accounts-base'
   ])
 
   api.addFiles('private:groups.js');
