@@ -20,7 +20,6 @@ Groups.helpers({
 
 Meteor.methods({
  'addGroup': function (groupObj) {
-    Roles.setUserRoles(Meteor.users.find(this.userId, {limit:1}), Groups.adminRole, '_id')
     if (!_.isObject(groupObj)) {
       throw new Meteor.Error('not-object', 'arguments must be in object form')
     }
