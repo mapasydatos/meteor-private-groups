@@ -1,21 +1,15 @@
 Groups = new Mongo.Collection('groups');
-Groups.adminRole = '';
 
-Meteor.users.helpers({
-  addRole: function (role, group) {
+Meteor.users.$helpers = Meteor.users.$helpers || {}
+Meteor.users.$helpers.addRole = function (role, group) {
+}
+Meteor.users.$helpers.removeRole = function (role, group) {
 
-  },
-  removeRole: function (role, group) {
+}
 
-  }
-});
-
-Groups.helpers({
-  create: function () {
-    console.log(this.$data())
-    // Meteor.call('addGroup', this.$data())
-  }
-});
+Groups.$helpers.create = function () {
+  Meteor.call('addGroup', this.$data())
+}
 
 
 Meteor.methods({
@@ -40,6 +34,7 @@ Can.do({
   action: 'method',
   subject: 'addGroup',
   user: function (user, params) {
+    return true; //temp!!!
     if (user) { 
       if (Meteor.isServer) {
         return user.admin; //only available on server
