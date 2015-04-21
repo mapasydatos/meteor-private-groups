@@ -17,13 +17,13 @@ Package.onUse(function(api) {
     'mreaction:shadow-helpers@0.2.0',
     'meteor-platform', //we use all core standards
     'alanning:roles@1.2.13', 
-    'kestanous:candid@0.3.0-pre2',
+    'kestanous:candid@0.3.0-pre3',
     'accounts-base'
   ])
 
   api.addFiles('private:groups.js');
 
-  api.export('Groups')
+  api.export('Group')
 });
 
 Package.onTest(function(api) {
