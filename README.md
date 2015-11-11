@@ -1,2 +1,1 @@
-# meteor-private-groups
-Meteor packages for private projects
+Pending deletion. Currently used with MBA v1.0
